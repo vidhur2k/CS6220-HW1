@@ -58,6 +58,8 @@ public class Earthquake {
 		job.setJarByClass(Earthquake.class);
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        // FileInputFormat.setMaxInputSplitSize(job, 100000);
+		// FileInputFormat.setMaxInputSplitSize(job, 500000);
 		job.setMapperClass(EarthquakeMapper.class);
 		job.setReducerClass(EarthquakeReducer.class);
 		job.setOutputKeyClass(Text.class);
