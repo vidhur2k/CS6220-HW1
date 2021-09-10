@@ -27,6 +27,8 @@ This is a text file containing measurements of tremors along Earthquake-hotspots
 
 **Earthquake Measurement**
 1. **eq.jar**: This is the Earthquake MapReduce program with the default parameters.
+2. **eq-100k.jar**: This is the Earthquake MapReduce program with a max input split size of 1000000.
+3. **eq-500k.jar**: This is the Earthquake MapReduce program with a max input split size of 5000000.
 
 #### Directory Structure for HDFS
 You'll need to move all datasets into the HDFS for use in the MapReduce programs. The structure is as follows:
